@@ -4,7 +4,7 @@
 
 # Created by:    Austin Putz
 # Original date: 2016-05-01
-# Last updated:  2017-09-27
+# Last updated:  2018-09-12
 # License:       GPLv2.0
 
 #==============================================================================#
@@ -30,8 +30,8 @@ function makeA(ped, print=false)
 	N = n + 1
 	A = zeros(N, N)
 
-	s = (s == 0)*N + s
-	d = (d == 0)*N + d
+	s = (s == 0)*N .+ s
+	d = (d == 0)*N .+ d
 
 # Begin FOR loop
 	for i in 1:n
