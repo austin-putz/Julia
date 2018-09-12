@@ -74,21 +74,26 @@ y = [4.5, 2.9, 3.9, 3.5, 5.0]
 X = [1 0; 0 1; 0 1; 1 0; 1 0]
 
 # Z matrix elements
-Zleft = zeros(5, 3)
-Zright = eye(5)
+Zleft  = zeros(5, 3)
+Zright = Array{Float64}(I, 5, 5)    # new in 1.0
 
 # combine left and right sizes of Z
-Z = hcat(Zleft, Zright)
+Z = hcat(Zleft, Zright)   # or use [Zleft Zright] will do the same thing
 
 # calculate LHS of MME
 top    = hcat(X'X, X'Z)
 bottom = hcat(Z'X, Z'Z + Ainv*alpha)
 LHS    = vcat(top, bottom)
 
+# Or Use:
+# [X'X X'Z
+# Z'X  Z'Z .+ (Ainv*alpha)]
+# for an 'all in one solution' (may be more efficient)
+
 println("\nLeft Hand Side (LHS) Built!")
 
 # calculate RHS
-RHS = vcat(X'y, Z'y)
+RHS = vcat(X'y, Z'y)  # or use [X'y; Z'y]  # just the semicolon in between them
 
 println("\nRight Hand Side (RHS) Built!\n")
 
@@ -101,10 +106,10 @@ println("# Solving MME...")
 println("#----------------------------------------")
 
 # solve
-sol = LHS\RHS
+sol = LHS\RHS   # to solve MME! (inverse(LHS)*RHS)
 
 # fixed effects solutions
-sol_fixed = sol[1:size(X)[2]]
+sol_fixed = sol[1:size(X)[2]]   # can use size(X)[2] to make sure it's always the right length
 
 # print them
 println("\nFixed solutions to MME\n\n", sol_fixed, "\n")
