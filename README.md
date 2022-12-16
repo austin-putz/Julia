@@ -33,6 +33,14 @@ finally add this line to your .bash_profile if you haven't already (adds to your
 export PATH=$HOME/bin:$PATH
 ```
 
+
+
+## Stream Editing
+
+I wrote a stream editor in the file `stream_editor.jl`. You can replace your file name and your dictionary to search and replace line by line with Julia. 
+
+
+
 ## Animal Breeding
 
 ### makeA.jl
