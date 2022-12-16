@@ -19,6 +19,8 @@ I think on Mac I used the following.
 ln -s /Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia julia
 ```
 
+Of course change the path to your current version (i.e. not v0.4.5). 
+
 On Linux (Ubuntu) I add this line to my `.bash_profile`:
 
 ```bash
@@ -31,13 +33,15 @@ finally add this line to your .bash_profile if you haven't already (adds to your
 export PATH=$HOME/bin:$PATH
 ```
 
-## makeA.jl
+## Animal Breeding
+
+### makeA.jl
 
 Used to create the A matrix, adopted from Gota Morota's R function. 
 
-## chapter3.jl
+### chapter3.jl
 
-Code for chapter 3 of Mrodes book. Solve the MME with Julia!
+Code for chapter 3 of Mrodes book. Solve the basic animal model MME with Julia!
 
 
 
