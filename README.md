@@ -1,6 +1,6 @@
 # Julia
 
-Julia code
+Please see the official docs for Julia here: [Official Julia Docs](https://docs.julialang.org/en/v1/)
 
 Make sure to softlink your newest julia version to your ~/bin folder on Mac/Linux so you can access julia with simply 'julia' on the command line. Use the command line to add your bin folder if you haven't already. 
 
