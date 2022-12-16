@@ -39,6 +39,11 @@ export PATH=$HOME/bin:$PATH
 
 I wrote a stream editor in the file `stream_editor.jl`. You can replace your file name and your dictionary to search and replace line by line with Julia. 
 
+Run the script like this:
+
+```julia
+julia stream_editor.jl
+```
 
 
 ## Animal Breeding
