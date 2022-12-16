@@ -20,8 +20,8 @@
 # animal3 65675656557
 
 # open the file for reading (rename to your file names)
-infile = open("genotypes.txt", "r")
-outfile = open("genotypes_replaced.txt", "w")
+infile = open("genotypes.txt", "r")            # Replace file name!
+outfile = open("genotypes_replaced.txt", "w")  # Replace file name!
 
 # read each line in file
 for line in eachline(infile)
@@ -30,7 +30,8 @@ for line in eachline(infile)
 	split_line = split(line, " ")[end]
 
 	# search for 0 and repalce it with 5
-	line = replace(split_line, "0" => "5", "1" => "6", "2" => "7")
+	line = replace(split_line, 
+		"0" => "5", "1" => "6", "2" => "7"). # Replace with your own dictionary like this!
 
 	# print updated line
 	write(outfile, line, "\n")
