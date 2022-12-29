@@ -16,10 +16,10 @@ I think on Mac I used the following.
 
 ```bash
 # soft link
-ln -s /Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia julia
+ln -s /Applications/Julia-1.8.app/Contents/Resources/julia/bin/julia julia
 ```
 
-Of course change the path to your current version (i.e. not v0.4.5). 
+Of course change the path to your current version (i.e. update 1.8 if needed). 
 
 On Linux (Ubuntu) I add this line to my `.bash_profile`:
 
