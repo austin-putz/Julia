@@ -4,8 +4,9 @@
 
 # Author:    Austin Putz
 # Created:   Sept 27, 2017
-# Modified:  Sept 27, 2017
+# Modified:  Jan 3, 2023
 # License:   MIT
+# Version:   0.1.0
 
 #==============================================================================#
 # Description
