@@ -15,6 +15,13 @@
 # This script creates the genomic relationship matrix (G) from genotypes
 
 #------------------------------------------------------------------------------#
+# Inputs
+#------------------------------------------------------------------------------#
+
+# set number of threads for BLAS
+BLAS_n_threads = 7
+
+#------------------------------------------------------------------------------#
 # Libraries
 #------------------------------------------------------------------------------#
 
@@ -34,7 +41,7 @@ using BenchmarkTools
 using LinearAlgebra
 
 # set thread (core) count for BLAS
-BLAS.set_num_threads(7)
+BLAS.set_num_threads(BLAS_n_threads)
 
 #------------------------------------------------------------------------------#
 # Main
