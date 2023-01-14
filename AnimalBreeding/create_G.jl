@@ -18,6 +18,17 @@
 # Libraries
 #------------------------------------------------------------------------------#
 
+# load Pkg package
+using Pkg
+
+# install packages if not installed
+if !("BenchmarkTools" in keys(Pkg.dependencies()))
+	Pkg.add("BenchmarkTools")
+end
+if !("LinearAlgebra" in keys(Pkg.dependencies()))
+	Pkg.add("LinearAlgebra")
+end
+
 # Packages
 using BenchmarkTools
 using LinearAlgebra
