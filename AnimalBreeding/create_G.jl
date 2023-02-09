@@ -39,6 +39,8 @@ end
 # Packages
 using BenchmarkTools
 using LinearAlgebra
+using Random
+using Distributions
 
 # set thread (core) count for BLAS
 BLAS.set_num_threads(BLAS_n_threads)
@@ -51,24 +53,14 @@ BLAS.set_num_threads(BLAS_n_threads)
 println("Create Haplotypes")
 
 # set boolean 0/1 for haplotypes
-@time M1 = rand(Bool, (10000, 50000))
-@time M2 = rand(Bool, (10000, 50000))
-
-# message
-println("Add Haplotypes for Genotype")
-
-# add haplotypes to get genotype matrix (0/1/2)
-@time M = M1 + M2
-
-# reset X1 and X2 variables to garbage collect later
-M1 = 1
-M2 = 1
+@time M = rand(Binomial(2, 0.5), (10000, 50000))
 
 # message
 println("Convert to Float32")
 
 # convert Int to Float
-@time M = Matrix{Float32}(M)
+#@time M = Matrix{Float32}(M)   # OLD
+@time M = Float32.(M)
 
 # message
 println("Get Column Means (2 x p) and p (allele freq)")
